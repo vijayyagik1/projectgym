@@ -1,0 +1,60 @@
+.section2_about {
+  display: flex;
+  justify-content: flex-start;
+}
+p {
+  font-weight: 500;
+}
+section {
+  margin: 7rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+h3 {
+  margin: 1rem;
+}
+
+p {
+  margin-left: 1.5rem;
+}
+.section2_inner1 {
+  margin-left: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.section2_inner2 {
+  margin-left: 2rem;
+  padding: 3rem;
+}
+
+.section3_about {
+  display: flex;
+}
+.section3_inner1 {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.about_txt {
+  color: red;
+  font-size: 40px;
+  margin-left: 1.4rem;
+}
+.why_txt {
+  color: red;
+  font-size: 40px;
+  margin-left: -0.2rem;
+  padding-bottom: 0.3rem;
+}
+
+.video1 {
+  box-shadow: 5px 10px #e20e0e;
+}
+
+h1,
+p {
+  margin: 0.3rem;
+}

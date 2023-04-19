@@ -1,0 +1,27 @@
+.body_word {
+  color: rgb(196, 37, 37);
+}
+
+.head_txt {
+  width: 25rem;
+  margin-top: 4.8rem;
+  margin-left: 8rem;
+}
+
+h1 {
+  color: rgb(29, 6, 77);
+}
+
+.button_carousel {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.nxt_btn {
+  color: black;
+}
+.pre_btn {
+  color: black;
+}
