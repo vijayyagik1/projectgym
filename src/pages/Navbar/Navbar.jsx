@@ -13,7 +13,7 @@ export default function Navbar () {
   }
 
   const handleLogin = () => {
-    // alert("vijat")
+    // alert("vijay")
     navigate('/login')
   }
 
@@ -49,3 +49,4 @@ export default function Navbar () {
     </header>
   )
 }
+

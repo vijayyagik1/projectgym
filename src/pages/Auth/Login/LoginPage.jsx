@@ -1,102 +1,61 @@
-// import React, { useState } from 'react'
-// import Button from '../../../components/Buttons/Button'
-// import Input from '../../../components/Inputs/Input'
-// import { useNavigate } from 'react-router-dom'
-// import Navbar from '../../Navbar/Navbar'
-
-// const handleClickLogin = () => {
-//   alert('login page')
-// }
-
-// export default function LoginPage () {
-//   const navigate = useNavigate()
-//   const handleClickRegister = () => {
-//     navigate('/register')
-//   }
-
-//   const [data, setData] = useState('')
-//   return (
-//     <>
-//       <Navbar />
-//       <h1>this is login page</h1>
-//       <Input
-//         type='email'
-//         onChange={e => setData(e.target.value)}
-//         placeholder='vijay'
-//       />
-//       <Input
-//         type='password'
-//         onChange={e => setData(e.target.value)}
-//         placeholder='vijay'
-//       />
-//       <Button onClick={handleClickLogin} buttonName='login' />
-//       <Button onClick={handleClickRegister} buttonName='Register for Gym' />
-//       <h1>{data}</h1>
-//     </>
-//   )
-// }
-
 import React, { useState } from 'react'
-import './Login.css'
-import { NavLink } from 'react-router-dom'
-const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const getData = e => {
-    e.preventDefault()
-    const userData = JSON.parse(localStorage.getItem('user'))
-    //console.log(userData)
-    const user = userData.find(element => element.email === email)
-    console.log(user)
-    if (user) {
-      if (user.password === password) {
-        // window.location.assign("/")
-        // window.location.href = "https://www.w3schools.com";
-        alert('login successfull')
-      } else {
-        alert('invalid password')
-      }
-    } else {
-      alert('User undefined')
-    }
+import styles from './LoginForm.module.css'
+// import login1 from '../../../assets/Images';
+import { useNavigate } from 'react-router-dom'
+import Button from '../../../components/Buttons/Button'
+import Navbar from '../../Navbar/Navbar'
 
-    setEmail('')
-    setPassword('')
+const LoginPage = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const userData = {
+      username,
+      password
+    }
+    localStorage.setItem('userData', JSON.stringify(userData))
+  }
+  const navigate = useNavigate()
+  const handleClickRegister = () => {
+    navigate('/register')
   }
 
   return (
-    <div className='mainPart'>
-      <div className='loginclass'>
-        <form onSubmit={getData} className='form1'>
-          <div className='input1'>
-            <h1>Login👍</h1>
+    <div>
+      <Navbar />
+      <div className={styles.login}>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <label className={styles.label}>
+            Email:
             <input
               type='text'
-              placeholder='Email'
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
+              value={username}
+              onChange={e => setUsername(e.target.value)}
             />
-          </div>
-          <div>
+          </label>
+          <label>
+            Password:
             <input
               type='password'
-              placeholder='Password'
               value={password}
-              required
               onChange={e => setPassword(e.target.value)}
+              className={styles.input}
             />
-          </div>
-          <button className='loginbtn'>Login</button>
+          </label>
+          <button className={styles.button} type='submit'>
+            Login{' '}
+          </button>
+          <Button
+            onClick={handleClickRegister}
+            buttonName='Register'
+            className={styles.ress}
+          />
         </form>
-        <p className='loginreg'>
-          Don't Have a Account?{' '}
-          <NavLink exact to='/registration' className='reglink'>
-            Register Here
-          </NavLink>
-        </p>
       </div>
     </div>
   )
 }
-export default Login
+
+export default LoginPage

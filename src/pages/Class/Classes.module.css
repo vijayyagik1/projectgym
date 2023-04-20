@@ -1,3 +1,6 @@
+.class_container {
+  margin-top: 6rem;
+}
 .image_scroller {
   display: flex;
   width: 100%;
@@ -25,4 +28,10 @@
   margin-left: 3rem;
   padding: 0.7rem;
   padding-left: 0px;
+}
+
+.disp_img {
+  width: 500px;
+  height: 600px;
+  margin: 0.5rem;
 }

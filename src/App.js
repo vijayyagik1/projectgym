@@ -3,7 +3,9 @@ import Navbar from './pages/Navbar/Navbar'
 function App () {
   return (
     <>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
     </>
   )
 }

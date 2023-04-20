@@ -1,0 +1,39 @@
+.blogs_container {
+  margin-top: 6rem;
+}
+.blog_img {
+  width: 400px;
+  height: 400px;
+}
+
+.h1_tag {
+  margin-left: 2.9rem;
+}
+
+.training_txt {
+  margin-left: 2.9rem;
+  color: red;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.blog_img_container {
+  display: flex;
+  width: 100vw;
+  height: 400px;
+  overflow: scroll;
+  margin-top: 2.7rem;
+  margin-left: 2.7rem;
+  overflow: hidden;
+  box-shadow: inset;
+}
+
+.scroll_button {
+  text-align: center;
+}
+
+.disp_img1 {
+  width: 500px;
+  height: 600px;
+  margin: 0.5rem;
+}

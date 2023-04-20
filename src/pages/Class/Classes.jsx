@@ -24,10 +24,10 @@ function Classes () {
       <div>
         <Navbar />
       </div>
-      <section>
+      <section className={styles.class_container}>
         <div>
           <div className={styles.inner1_section1}>
-            <h1>Training Program section</h1>
+            <h1>Training Program</h1>
           </div>
           <div className={styles.inner2_section1}>
             <span className={styles.training_txt}>Training Programs</span>
@@ -35,7 +35,12 @@ function Classes () {
 
           <div className={styles.image_scroller}>
             {imageCountArray.map(count => (
-              <img key={count} src={Class_Images[count + imgCount]} alt='img' />
+              <img
+                className={styles.disp_img}
+                key={count}
+                src={Class_Images[count + imgCount]}
+                alt='img'
+              />
             ))}
           </div>
           <div className={styles.scroll_button}>

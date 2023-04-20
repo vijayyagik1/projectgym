@@ -1,44 +1,9 @@
-// import React from 'react'
-// import Input from '../../../components/Inputs/Input'
-// import Button from '../../../components/Buttons/Button'
-// import { useNavigate } from 'react-router-dom'
-// import Navbar from '../../Navbar/Navbar'
-
-// export default function RegistrationPage () {
-//   const navigate = useNavigate()
-
-//   const handleClickLogin = () => {
-//     navigate('/login')
-//   }
-
-//   const handleClickRegister = () => {
-//     alert('register')
-//   }
-
-//   return (
-//     <>
-//       <Navbar />
-//       <h1>this is RegistrationPage page</h1>
-//       <Input type='text' placeholder='first name' />
-//       <Input type='text' placeholder='last name' />
-//       <Input type='email' placeholder='email' />
-//       <Input type='dob' placeholder='date of birth' />
-//       <Input type='select' placeholder='enter gender' />
-//       <Input type='password' placeholder='password' />
-//       <Input type='password' placeholder='confirm password' />
-//       <Button buttonName='Register' onClick={handleClickRegister} />
-//       <Button
-//         onClick={handleClickLogin}
-//         buttonName='Already Have an account ?'
-//       />
-//     </>
-//   )
-// }
-
-
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import './Registration.css'
+
+// import styles from './RegistrationPage.module.css'
+import styles from './RegestrationForm.module.css'
+import Navbar from '../../Navbar/Navbar'
 
 function Registration () {
   let initialValues
@@ -50,10 +15,6 @@ function Registration () {
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [registered, setRegistered] = useState({
-    isSubscribe: false,
-    isLogin: false
-  })
   const [userData, setUserData] = useState(initialValues)
 
   const handleSubmit = e => {
@@ -68,27 +29,26 @@ function Registration () {
       password: password
     }
 
-    localStorage.setItem('user', JSON.stringify(userData))
     setUserData([...userData, newUser])
     setUsername('')
     setEmail('')
     setPassword('')
     alert('registered successfully')
-    setRegistered({ ...registered, isLogin: true })
-    window.location.assign('/register')
+    window.location.assign('/login')
   }
-  console.log(registered)
+
   useEffect(() => {
     localStorage.setItem('user', JSON.stringify(userData))
   }, [userData])
 
   return (
     <>
-      <div className='regbg'>
-        <div className='maincontentreg'>
+      <Navbar />
+      <div className={styles.regbg}>
+        <div className={styles.maincontentreg}>
           <h1 style={{ color: 'white' }}>Register Here👍</h1>
           <form onSubmit={handleSubmit}>
-            <div className='formlogin'>
+            <div className={styles.formlogin}>
               Email{' '}
               <input
                 type='text'
@@ -101,7 +61,7 @@ function Registration () {
               />
             </div>
 
-            <div className='formlogin'>
+            <div className={styles.formlogin}>
               UserName
               <input
                 name='username'
@@ -114,7 +74,7 @@ function Registration () {
               />
             </div>
 
-            <div className='formlogin'>
+            <div className={styles.formlogin}>
               Password
               <input
                 type='password'
@@ -128,7 +88,9 @@ function Registration () {
 
             <div>
               <div>
-                <button className='regbtn'>Register</button>
+                <button type='submit' className={styles.regbtn}>
+                  Register
+                </button>
               </div>
               <p>
                 Already have an account?

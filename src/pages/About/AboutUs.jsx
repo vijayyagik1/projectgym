@@ -12,20 +12,7 @@ export default function AboutUs () {
         <Navbar />
       </div>
       <section className={styles.container_about}>
-        <div className={styles.section1_about}>
-          {/* <ol>
-            <h1>2) About us and why choose us section</h1>
-            <p>
-               we have to add youtube video here (as shown in below design )
-            </p>
-            <p> user can play this video on clicking on that </p>
-            <p> will save user registration detail in local storage .</p>
-            <p>
-               Header will be sticky , will not move on scrolling home page .
-            </p>
-            <p> Handle all possible scenarios at registration page .</p>
-          </ol> */}
-        </div>
+        <div className={styles.section1_about}></div>
       </section>
       <section>
         <div className={styles.section2_about}>
