@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  background-color: #666161f7;
+  /* background-color: #666161f7; */
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +23,8 @@
 }
 
 .header ul li a:hover {
-  color: black;
+  /* color: black; */
+  color: red;
 }
 .header ul li {
   margin-right: 3rem;
