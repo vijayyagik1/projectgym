@@ -1,13 +1,13 @@
-import './App.css'
-import Navbar from './pages/Navbar/Navbar'
-function App () {
+import "./App.css";
+import Navbar from "./pages/Navbar/Navbar";
+function App() {
   return (
     <>
       <div>
         <Navbar />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

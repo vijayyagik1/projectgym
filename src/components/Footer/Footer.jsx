@@ -1,15 +1,15 @@
-import React from 'react'
-import styles from './Footer.module.css'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import styles from "./Footer.module.css";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { useNavigate } from "react-router-dom";
 
-export default function Footer () {
-  const navigate = useNavigate()
+export default function Footer() {
+  const navigate = useNavigate();
   const handlegymhome = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   return (
     <>
@@ -71,5 +71,5 @@ export default function Footer () {
         <p>@2023 isr all right copy reserved</p>
       </div>
     </>
-  )
+  );
 }

@@ -1,110 +1,162 @@
-.container_pricing {
+.daypass_price,
+.daypass_month_to_month,
+.daypass_membership {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
   width: 100%;
-  height: 100%;
-  padding: 2rem;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.daypass_price {
-  width: 16%;
-  height: 45vh;
-  border-radius: 0.5rem;
-  margin-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.inner1_pricing,
+.inner1_month,
+.inner1_membership {
   align-items: center;
-  color: white;
-}
-.inner1_pricing {
-  text-align: center;
-}
-.inner2_pricing {
-  text-align: center;
-}
-.inner3_pricing {
-  text-align: center;
-}
-
-.daypass_month_to_month {
-  border-radius: 0.5rem;
-  background: white;
-  height: 75%;
-  width: 17%;
-  color: rgb(77, 67, 67);
-  margin: 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 20px 30px;
 }
 
 .inner1_month {
-  text-align: center;
-}
-.inner2_month {
-  text-align: center;
-}
-.inner3_month {
-  text-align: center;
-}
-
-.daypass_membership {
-  color: white;
-  height: 95%;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
-.inner1_membership {
-  text-align: center;
-}
-.inner2_membership {
-  text-align: center;
-}
-.inner3_membership {
-  text-align: center;
-}
-.inner4_membership {
-  text-align: center;
-}
-.inner5_membership {
-  text-align: center;
-}
-.dollar {
-  color: green;
-  font-size: 1.7rem;
-}
-.dollar_sign {
-  color: green;
-  font-size: 1rem;
+
+.inner1_pricing h3,
+.inner1_month h3,
+.inner1_membership h1 {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.daypass_price {
-  background-color: rgb(34, 32, 32);
+.inner1_month h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
 }
-.button_daypass {
-  border-radius: 0.3rem;
-  border: none;
-  width: 6rem;
-  height: 1.5rem;
-  margin-top: 1rem;
+
+.inner1_month h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
 }
+
+.inner1_pricing em,
+.inner1_month em {
+  color: #666666;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.dollar_sign,
+.dollar {
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.inner2_pricing,
+.inner2_month,
+.inner3_membership {
+  padding: 20px 30px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inner2_pricing p,
+.inner2_month p,
+.inner3_membership p {
+  color: #666666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.inner3_pricing,
+.inner3_month,
+.inner4_membership,
+.inner5_membership {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.button_daypass,
 .button1_daypass {
-  border-radius: 0.3rem;
-  background-color: green;
-  margin: 1rem;
-  color: white;
+  background-color: #ea4335;
   border: none;
-  width: 6rem;
-  height: 1.5rem;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button_daypass:hover,
+.button1_daypass:hover {
+  background-color: #c52212;
 }
 
 .strong {
-  color: aqua;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+  .container_pricing {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .daypass_price,
+  .daypass_month_to_month,
+  .daypass_membership {
+    margin-bottom: 20px;
+  }
+
+  .inner1_pricing,
+  .inner1_month,
+  .inner1_membership {
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .inner1_month h2 {
+    margin-top: 20px;
+  }
+
+  .inner2_pricing,
+  .inner2_month,
+  .inner3_membership {
+    padding: 20px 0;
+  }
+
+  .inner3_pricing,
+  .inner3_month,
+  .inner4_membership,
+  .inner5_membership {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .button_daypass,
+  .button1_daypass {
+    margin-top: 20px;
+  }
+
+  .strong {
+    margin-bottom: 20px;
+  }
 }

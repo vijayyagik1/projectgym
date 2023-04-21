@@ -1,73 +1,35 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import styles from './About.module.css'
-import { Videos } from '../../assets/Videos'
-import { Videos1 } from '../../assets/Videos'
-import ReactPlayer from 'react-player'
+import React from "react";
+import ReactPlayer from "react-player";
+import styles from "./About.module.css";
+import { Videos } from "../../assets/Videos";
+import { Videos1 } from "../../assets/Videos";
 
-export default function AboutUs () {
+function AboutUsPage() {
   return (
-    <>
-      <div>
-        <Navbar />
+    <div className={styles.aboutUsPage}>
+      <div className={styles.aboutUsText}>
+        <h2>About Us</h2>
+        <p>
+          Our gym is dedicated to providing a fun and challenging workout
+          experience for people of all fitness levels. We offer a variety of
+          classes and training programs to help you achieve your health and
+          fitness goals.
+        </p>
+        <p>
+          Our trainers are experienced professionals who are passionate about
+          helping you succeed. Whether you're just starting out or looking to
+          take your fitness to the next level, we're here to support and
+          motivate you every step of the way.
+        </p>
       </div>
-      <section className={styles.container_about}>
-        <div className={styles.section1_about}></div>
-      </section>
-      <section>
-        <div className={styles.section2_about}>
-          <div className={styles.section2_inner1}>
-            <ReactPlayer
-              url={Videos}
-              controls={true}
-              playing={false}
-              loop={true}
-              muted={true}
-              className={styles.video1}
-            />
-          </div>
-          <div className={styles.section2_inner2}>
-            <span className={styles.about_txt}>About Us</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              atque dolore est quos ad! Modi ipsam suscipit quidem, illum
-              placeat doloremque, et at tempora fugit vero laboriosam.
-              Veritatis, amet mollitia.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className={styles.section3_about}>
-          <div className={styles.section3_inner1}>
-            <span className={styles.why_txt}>Why Choosen Us</span>
-            <h3>Consultation With Expert</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              sunt suscipit maiores aut voluptatibus id, saepe nostrum
-              laboriosam quo itaque qui vitae illum similique laudantium
-              quibusdam ratione minima, dolorem magnam.
-            </p>
-            <h3>Best Workout Facilities</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque doloribus in omnis asperiores ipsa error nam distinctio
-              consequuntur accusantium impedit non, dolorum enim autem, sequi
-              placeat iusto delectus maiores perspiciatis?
-            </p>
-          </div>
-          <div className={styles.section2_inner1}>
-            <ReactPlayer
-              url={Videos1}
-              controls={true}
-              playing={false}
-              loop={true}
-              muted={true}
-              className={styles.video1}
-            />
-          </div>
-        </div>
-      </section>
-    </>
-  )
+      <div className={styles.videoContainer}>
+        <ReactPlayer url={Videos} controls width="100%" height="100%" />
+      </div>
+      <div className={styles.videoContainer}>
+        <ReactPlayer url={Videos1} controls width="100%" height="100%" />
+      </div>
+    </div>
+  );
 }
+
+export default AboutUsPage;

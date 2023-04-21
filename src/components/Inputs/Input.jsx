@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function Input ({ onChange, type, value, placeholder }) {
+export default function Input({ onChange, type, value, placeholder }) {
   return (
     <>
       <input
@@ -10,5 +10,5 @@ export default function Input ({ onChange, type, value, placeholder }) {
         placeholder={placeholder}
       />
     </>
-  )
+  );
 }

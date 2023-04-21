@@ -1,78 +1,3 @@
-/* .login-form {
-  /* background-image: url('https://source.unsplash.com/1600x900/?nature,water'); */
-/* background-size: unset;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-align-items: baseline; */
-/* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
-  /* background-image: url('https://c4.wallpaperflare.com/wallpaper/392/36/36/5bd16e60ad82b-wallpaper-preview.jpg'); */
-
-/* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: deepskyblue;
-} */
-
-/* .form-input {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  max-width: 100%;
-  font-size: 16px;
-} */
-
-/* .form-button {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #008cba;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.form-error {
-  color: red;
-  margin: 10px;
-}
-
-body{ */
-/* background-image: url('https://source.unsplash.com/1600x900/?nature,water'); */
-/* background-size: unset;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-align-items: baseline; */
-/* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
-  /* background-image: url('https://c4.wallpaperflare.com/wallpaper/392/36/36/5bd16e60ad82b-wallpaper-preview.jpg'); */
-
-/* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: deepskyblue;
-} */
 .login {
   /* background-image: url('https: //img.freepik.com/free-photo/young-fitness-man-studio_7502-5006.jpg?w=1060&t=st=1681934545~exp=1681935145~hmac=2fb56b1a65c1eed3933faccfaec26d82a71bd665a05b47175d4188c0773d3fa4;');
      */
@@ -101,18 +26,25 @@ label {
 input {
   display: block;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0.5px solid gray;
 }
 
+/* .formlogin input {
+    
+  } */
+
 button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
   cursor: pointer;
+  margin-right: 34px;
 }
 
 button:hover {

@@ -1,56 +1,64 @@
-import React, { useState } from 'react'
-import Navbar from '../Navbar/Navbar'
-import { Class_Images } from '../../assets/Images'
-import styles from './Classes.module.css'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
+import React from "react";
+import styles from "./Classes.module.css";
+// import image1 from '../../assets/images/image1.jpg';
+// import image2 from '../../assets/images/image2.jpg';
+// import { Videos } from "../../assets/Videos";
+import { image1 } from "../../assets/Images";
+import { image2 } from "../../assets/Images";
+import { image3 } from "../../assets/Images";
 
-function Classes () {
-  const [imgCount, setImageCount] = useState(0)
-  const imageCountArray = [0, 1, 2, 3, 4]
-
-  const handlePreImg = () => {
-    setImageCount(
-      pre => (pre - 1 + imageCountArray.length) % imageCountArray.length
-    )
-  }
-
-  const handleNxtImg = () => {
-    setImageCount(pre => (pre + 1) % imageCountArray.length)
-  }
-
+const Classes = () => {
   return (
-    <>
-      <div>
-        <Navbar />
-      </div>
-      <section className={styles.class_container}>
-        <div>
-          <div className={styles.inner1_section1}>
-            <h1>Training Program</h1>
-          </div>
-          <div className={styles.inner2_section1}>
-            <span className={styles.training_txt}>Training Programs</span>
-          </div>
-
-          <div className={styles.image_scroller}>
-            {imageCountArray.map(count => (
-              <img
-                className={styles.disp_img}
-                key={count}
-                src={Class_Images[count + imgCount]}
-                alt='img'
-              />
-            ))}
-          </div>
-          <div className={styles.scroll_button}>
-            <ArrowBackIosIcon onClick={handlePreImg} />
-            <ArrowForwardIosIcon onClick={handleNxtImg} />
-          </div>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Training Programs</h1>
+      <div className={styles.content}>
+        <div className={styles.info}>
+          <h2 className={styles.title}>Beginner Program</h2>
+          <p className={styles.description}>
+            Our beginner program is designed for those who are new to working
+            out or have been away from the gym for an extended period of time.
+            This program is focused on building a strong foundation of strength
+            and conditioning while also introducing proper form and technique
+            for common exercises.
+          </p>
+          <p className={styles.price}>$99/month</p>
         </div>
-      </section>
-    </>
-  )
-}
+        <div className={styles.image}>
+          <img src={image1} alt="Beginner Program" />
+        </div>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.info}>
+          <h2 className={styles.title}>Advanced Program</h2>
+          <p className={styles.description}>
+            Our advanced program is designed for experienced gym-goers who are
+            looking to take their training to the next level. This program is
+            focused on progressive overload and advanced training techniques to
+            help you achieve your fitness goals.
+          </p>
+          <p className={styles.price}>$149/month</p>
+        </div>
+        <div className={styles.image}>
+          <img src={image2} alt="Advanced Program" />
+        </div>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.info}>
+          <h2 className={styles.title}>Personal Training</h2>
+          <p className={styles.description}>
+            For those who prefer one-on-one coaching, we offer personal training
+            sessions with our certified trainers. Our trainers will work with
+            you to create a customized training program based on your specific
+            goals and needs.
+          </p>
+          <p className={styles.price}>Starting at $79/session</p>
+        </div>
+        <div className={styles.image}>
+          <img src={image3} alt="Personal Training" />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Classes
+export default Classes;
