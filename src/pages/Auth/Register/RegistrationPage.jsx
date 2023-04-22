@@ -17,14 +17,25 @@ function Registration() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let users = JSON.parse(localStorage.getItem("user")) || [];
-    let res = users.filter(
-      (user) =>
-        user.email.toString() === email.toString() ||
-        user.username.toString() === username.toString()
-    );
-    if (res.length > 0) {
-      alert("User already register");
+    const users = JSON.parse(localStorage.getItem("user")) || [];
+    let isEmailRegistered = false;
+    let isUsernameTaken = false;
+
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].email === email) {
+        isEmailRegistered = true;
+        break;
+      }
+      if (users[i].username === username) {
+        isUsernameTaken = true;
+        break;
+      }
+    }
+
+    if (isEmailRegistered) {
+      alert("Email already registered");
+    } else if (isUsernameTaken) {
+      alert("Username already taken");
     } else {
       addingUser(email, username, password);
     }
@@ -90,6 +101,7 @@ function Registration() {
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\da-zA-Z]).{8,20}$"
               />
             </div>
 

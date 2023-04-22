@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import styles from "./LoginForm.module.css";
+// import styles from "./LoginPage.module.css";
+import styles from './LoginForm.module.css'
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Buttons/Button";
 
@@ -23,16 +24,23 @@ const LoginPage = () => {
 
   function handleLogin() {
     const Users = JSON.parse(localStorage.getItem("user")) || [];
-    const filteredUsers = Users.filter((user) => {
-      return (
-        user.username.toString() === username.toString() &&
-        user.password.toString() === password.toString()
-      );
-    });
-    if (filteredUsers.length > 0) {
-      alert("Login success");
-    } else {
-      alert("Invalid credentials");
+    let usernameMatchFound = false;
+
+    for (let i = 0; i < Users.length; i++) {
+      if (Users[i].username.toString() === username.toString()) {
+        usernameMatchFound = true;
+        if (Users[i].password.toString() === password.toString()) {
+          alert("Login success");
+          return;
+        } else {
+          alert("Invalid credentials");
+          return;
+        }
+      }
+    }
+
+    if (!usernameMatchFound) {
+      alert("Invalid username");
     }
   }
 
@@ -46,6 +54,7 @@ const LoginPage = () => {
               type="text"
               value={username}
               placeholder="UserName"
+              required
               onChange={(e) => setUsername(e.target.value)}
             />
           </label>
@@ -55,6 +64,7 @@ const LoginPage = () => {
               type="password"
               value={password}
               placeholder="Password"
+              required
               onChange={(e) => setPassword(e.target.value)}
               className={styles.input}
             />
